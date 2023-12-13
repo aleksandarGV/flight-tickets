@@ -3,13 +3,21 @@ import { NavLink, Outlet } from "react-router-dom";
 function Main() {
     return (
         <div>
-            <nav>
-                <NavLink to={"/"}>Home</NavLink>
-                <NavLink to={"/profile"}>Profile</NavLink>
-                <NavLink to={"/user-tickets"}>User Tickets</NavLink>
-            </nav>
-            <h1>I'm Main page</h1>
-            <Outlet />
+            <div
+                style={{
+                    padding: "10px",
+                    borderBottom: "3px solid #000",
+                }}
+            >
+                <nav>
+                    <NavLink to={"/"}>Home</NavLink>
+                    <NavLink to={"/user-tickets"}>User Tickets</NavLink>
+                    <NavLink to={"/profile"}>Profile</NavLink>
+                </nav>
+            </div>
+            <div style={{ maxWidth: "1440px", margin: "10px auto" }}>
+                <Outlet />
+            </div>
         </div>
     );
 }

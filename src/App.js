@@ -11,14 +11,7 @@ import ProtectedRouth from "./components/ProtectedRouth";
 function App() {
     return (
         <Routes>
-            <Route
-                path="/"
-                element={
-                    <ProtectedRouth>
-                        <Main />
-                    </ProtectedRouth>
-                }
-            >
+            <Route path="/" element={<Main />}>
                 <Route path="" element={<Home />} />
                 <Route path="profile" element={<Profile />} />
                 <Route path="user-tickets" element={<UserTickets />} />

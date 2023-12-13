@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { checkArrayForEmptyString } from "../utils/validations";
-import { useAuth } from "./useAuth";
 
 function useLogin() {
-    const { login } = useAuth();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -30,7 +28,7 @@ function useLogin() {
             }),
         })
             .then((res) => res.json())
-            .then((data) => login(data))
+            .then((data) => console.log(data))
             .catch((err) => console.log(err));
     }
 
